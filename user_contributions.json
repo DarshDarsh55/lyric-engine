@@ -1,0 +1,9 @@
+{
+  "rock": {
+    "for_artist_X": [],
+    "billboard_top_100": []
+  },
+  "pop": {
+    "for_artist_Y": []
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "global": {
+    "core_principles": [
+      "Use conversational language - no poetic or ethereal phrases",
+      "T-shirt concept hooks - chorus must end with a memorable line",
+      "Prioritize familiar, predictable phrases audiences know",
+      "No reusing words from chorus in verses/pre-choruses",
+      "Use slant rhymes and avoid reusing rhymes within sections"
+    ],
+    "modes": {
+      "artist": {
+        "description": "Personal, emotional themes with authentic language",
+        "examples": [
+          "I love you like 8 days a week",
+          "You got my name in ink, not pencil"
+        ]
+      },
+      "commercial": {
+        "description": "Action-based, high-energy content with urban cleverness",
+        "examples": [
+          "Can't stop the climb",
+          "Go big or go ghost"
+        ]
+      }
+    }
+  },
+  "steps": {
+    "concept": {
+      "instructions": "Generate or refine the core theme for the lyrics",
+      "artist_mode": {
+        "details": [
+          "Can explore nuanced emotions",
+          "Can address heartbreak or personal growth"
+        ]
+      },
+      "commercial_mode": {
+        "details": [
+          "Focus on motivation and energy",
+          "Avoid themes about gender, love, romance"
+        ]
+      }
+    }
+  },
+  "user_contributions": {
+    "rock": {
+      "for_artist_X": [],
+      "billboard_top_100": []
+    },
+    "pop": {
+      "for_artist_Y": []
+    }
+  }
+}

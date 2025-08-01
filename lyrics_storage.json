@@ -1,0 +1,20 @@
+{
+  "b1caa8f5-abd4-4e40-aaec-be99fe0c9ab5": {
+    "id": "b1caa8f5-abd4-4e40-aaec-be99fe0c9ab5",
+    "lyrics": "\n    Verse 1:\n    Walking through the city lights\n    Memories flash before my eyes\n    Every corner has a story\n    Of what was and what could be\n\n    Chorus:\n    This is my journey\n    This is my road\n    Every step I take\n    Leads me back home\n    ",
+    "analysis": {
+      "genre": "pop",
+      "style": "commercial",
+      "BPM": 120,
+      "key": "C Major",
+      "song_length": "3:30",
+      "rule_sources": [
+        "Rule 17",
+        "Rule 23"
+      ]
+    },
+    "is_reference": false,
+    "similar_to": [],
+    "timestamp": "2025-03-26T23:32:35.853590"
+  }
+}

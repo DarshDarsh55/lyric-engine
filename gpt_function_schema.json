@@ -1,0 +1,241 @@
+{
+  "openapi": {
+    "info": {
+      "title": "Advanced Rhyming System API",
+      "description": "API for finding rhymes, expressions, and wordplay",
+      "version": "v1"
+    },
+    "servers": [
+      {
+        "url": "https://yourusername.pythonanywhere.com"
+      }
+    ],
+    "paths": {
+      "/rhymes/{rhyme_type}/{word}": {
+        "get": {
+          "summary": "Get rhymes of a specific type for a word",
+          "operationId": "getRhymes",
+          "parameters": [
+            {
+              "name": "rhyme_type",
+              "in": "path",
+              "description": "Type of rhyme to find",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "enum": [
+                  "perfect",
+                  "consonance",
+                  "assonance",
+                  "multi_syllable",
+                  "first_syllable",
+                  "final_syllable",
+                  "alliteration",
+                  "metaphone",
+                  "soundex",
+                  "para",
+                  "feminine_para",
+                  "homophones",
+                  "light",
+                  "family",
+                  "broken",
+                  "reverse",
+                  "weakened",
+                  "trailing",
+                  "full_consonance",
+                  "full_assonance",
+                  "double_consonance",
+                  "double_assonance",
+                  "diminished",
+                  "intelligent",
+                  "related",
+                  "additive"
+                ]
+              }
+            },
+            {
+              "name": "word",
+              "in": "path",
+              "description": "Word to find rhymes for",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "word": {
+                        "type": "string"
+                      },
+                      "rhyme_type": {
+                        "type": "string"
+                      },
+                      "results": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/all_rhymes/{word}": {
+        "get": {
+          "summary": "Get all types of rhymes for a word",
+          "operationId": "getAllRhymes",
+          "parameters": [
+            {
+              "name": "word",
+              "in": "path",
+              "description": "Word to find all rhymes for",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/expressions/{word}": {
+        "get": {
+          "summary": "Get expressions containing a word",
+          "operationId": "getExpressions",
+          "parameters": [
+            {
+              "name": "word",
+              "in": "path",
+              "description": "Word to find expressions with",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "max",
+              "in": "query",
+              "description": "Maximum number of expressions to return",
+              "required": false,
+              "schema": {
+                "type": "integer",
+                "default": 20
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "word": {
+                        "type": "string"
+                      },
+                      "expressions": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rhyming_expressions/{word}": {
+        "get": {
+          "summary": "Get expressions that rhyme with a word",
+          "operationId": "getRhymingExpressions",
+          "parameters": [
+            {
+              "name": "word",
+              "in": "path",
+              "description": "Word to find rhyming expressions with",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "max",
+              "in": "query",
+              "description": "Maximum number of expressions to return",
+              "required": false,
+              "schema": {
+                "type": "integer",
+                "default": 20
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "word": {
+                        "type": "string"
+                      },
+                      "rhyming_expressions": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/wordplay/{word}": {
+        "get": {
+          "summary": "Get wordplay opportunities for a word",
+          "operationId": "getWordplay",
+          "parameters": [
+            {
+              "name": "word",
+              "in": "path",
+              "description": "Word to find wordplay for",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "
